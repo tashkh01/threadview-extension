@@ -1,0 +1,15 @@
+# Build artifacts
+dist/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Defensive — none used today
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

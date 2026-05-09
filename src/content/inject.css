@@ -1,0 +1,63 @@
+/* inject.css
+ *
+ * Styles for the floating ThreadView button. Loaded into a Shadow DOM root
+ * attached to <body>, so these rules are completely isolated from Gmail's
+ * stylesheets and vice versa. No `!important` needed.
+ */
+
+:host {
+  all: initial;
+}
+
+.tv-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2147483647; /* sit above every Gmail layer */
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+
+  background: #1a73e8;          /* Gmail-ish blue, recognizable but our own */
+  color: #ffffff;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18), 0 2px 4px rgba(0, 0, 0, 0.12);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+
+  user-select: none;
+}
+
+.tv-fab:hover {
+  background: #1765c8;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px);
+}
+
+.tv-fab:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.tv-fab:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.tv-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h7v2H4z'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h7v2H4z'/></svg>") no-repeat center / contain;
+}

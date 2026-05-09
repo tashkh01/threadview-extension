@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThreadView</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <header class="tv-header">
+    <div class="tv-header-inner">
+      <div class="tv-header-text">
+        <h1 id="tv-subject">Loading…</h1>
+        <p id="tv-meta" class="tv-meta"></p>
+      </div>
+      <div class="tv-width-toggle" role="radiogroup" aria-label="Reading width">
+        <button type="button" class="tv-width-btn" data-width="medium" role="radio" aria-checked="false" title="Medium (900px)">Medium</button>
+        <button type="button" class="tv-width-btn" data-width="wide" role="radio" aria-checked="false" title="Wide (1100px)">Wide</button>
+        <button type="button" class="tv-width-btn" data-width="xwide" role="radio" aria-checked="false" title="X Wide (1300px)">X Wide</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="tv-main">
+    <div id="tv-status" class="tv-status" hidden></div>
+    <div id="tv-thread" class="tv-thread"></div>
+
+    <details class="tv-debug">
+      <summary>Debug</summary>
+      <div class="tv-debug-body">
+        <h3>Parsed thread (JSON)</h3>
+        <pre id="tv-parsed" class="tv-pre">(empty)</pre>
+        <h3>Raw print HTML</h3>
+        <pre id="tv-raw" class="tv-pre tv-pre-small">(empty)</pre>
+      </div>
+    </details>
+  </main>
+
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
