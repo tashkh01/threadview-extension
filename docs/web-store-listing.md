@@ -153,7 +153,7 @@ ROADMAP (gated on user demand)
 SOURCE & CONTACT
 
 ThreadView is open source under the MIT license. Source code:
-https://github.com/[OWNER]/threadview (URL TBD on submission day).
+https://github.com/tashkh01/threadview-extension
 
 Privacy or feature requests: threadview@betterwayiq.com
 ```
